@@ -1,74 +1,413 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Mallikvala page by mallikvala</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Dashboard - SB Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
   </head>
+
   <body>
 
-      <header>
-        <h1>Mallikvala page</h1>
-        <p></p>
-      </header>
+    <div id="wrapper">
 
-      <div id="banner">
-        <span id="logo"></span>
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SB Admin</a>
+        </div>
 
-        <a href="https://github.com/mallikvala" class="button fork"><strong>View On GitHub</strong></a>
-      </div><!-- end banner -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
+            <li><a href="forms.html"><i class="fa fa-edit"></i> Forms</a></li>
+            <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
+            <li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i> Bootstrap Elements</a></li>
+            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Bootstrap Grid</a></li>
+            <li><a href="blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown Item</a></li>
+                <li><a href="#">Another Item</a></li>
+                <li><a href="#">Third Item</a></li>
+                <li><a href="#">Last Item</a></li>
+              </ul>
+            </li>
+          </ul>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown messages-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">7 New Messages</li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">View Inbox <span class="badge">7</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown alerts-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Default <span class="label label-default">Default</span></a></li>
+                <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
+                <li><a href="#">Success <span class="label label-success">Success</span></a></li>
+                <li><a href="#">Info <span class="label label-info">Info</span></a></li>
+                <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
+                <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">View All</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
       </nav>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+      <div id="page-wrapper">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Dashboard <small>Statistics Overview</small></h1>
+            <ol class="breadcrumb">
+              <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+            </ol>
+            <div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Welcome to SB Admin by <a class="alert-link" href="http://startbootstrap.com">Start Bootstrap</a>! Feel free to use this template for your admin needs! We are using a few different plugins to handle the dynamic tables and charts, so make sure you check out the necessary documentation links provided.
+            </div>
+          </div>
+        </div><!-- /.row -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-comments fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">456</p>
+                    <p class="announcement-text">New Mentions!</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      View Mentions
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-check fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">12</p>
+                    <p class="announcement-text">To-Do Items</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Complete Tasks
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-tasks fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">18</p>
+                    <p class="announcement-text">Crawl Errors</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Fix Issues
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-comments fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">56</p>
+                    <p class="announcement-text">New Orders!</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Complete Orders
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div><!-- /.row -->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Statistics: October 1, 2013 - October 31, 2013</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-area"></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Traffic Sources: October 1, 2013 - October 31, 2013</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-donut"></div>
+                <div class="text-right">
+                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o"></i> Recent Activity</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <span class="badge">just now</span>
+                    <i class="fa fa-calendar"></i> Calendar updated
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">4 minutes ago</span>
+                    <i class="fa fa-comment"></i> Commented on a post
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">23 minutes ago</span>
+                    <i class="fa fa-truck"></i> Order 392 shipped
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">46 minutes ago</span>
+                    <i class="fa fa-money"></i> Invoice 653 has been paid
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">1 hour ago</span>
+                    <i class="fa fa-user"></i> A new user has been added
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">2 hours ago</span>
+                    <i class="fa fa-check"></i> Completed task: "pick up dry cleaning"
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">yesterday</span>
+                    <i class="fa fa-globe"></i> Saved the world
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">two days ago</span>
+                    <i class="fa fa-check"></i> Completed task: "fix error on sales page"
+                  </a>
+                </div>
+                <div class="text-right">
+                  <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-money"></i> Recent Transactions</h3>
+              </div>
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-striped tablesorter">
+                    <thead>
+                      <tr>
+                        <th>Order # <i class="fa fa-sort"></i></th>
+                        <th>Order Date <i class="fa fa-sort"></i></th>
+                        <th>Order Time <i class="fa fa-sort"></i></th>
+                        <th>Amount (USD) <i class="fa fa-sort"></i></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3326</td>
+                        <td>10/21/2013</td>
+                        <td>3:29 PM</td>
+                        <td>$321.33</td>
+                      </tr>
+                      <tr>
+                        <td>3325</td>
+                        <td>10/21/2013</td>
+                        <td>3:20 PM</td>
+                        <td>$234.34</td>
+                      </tr>
+                      <tr>
+                        <td>3324</td>
+                        <td>10/21/2013</td>
+                        <td>3:03 PM</td>
+                        <td>$724.17</td>
+                      </tr>
+                      <tr>
+                        <td>3323</td>
+                        <td>10/21/2013</td>
+                        <td>3:00 PM</td>
+                        <td>$23.71</td>
+                      </tr>
+                      <tr>
+                        <td>3322</td>
+                        <td>10/21/2013</td>
+                        <td>2:49 PM</td>
+                        <td>$8345.23</td>
+                      </tr>
+                      <tr>
+                        <td>3321</td>
+                        <td>10/21/2013</td>
+                        <td>2:23 PM</td>
+                        <td>$245.12</td>
+                      </tr>
+                      <tr>
+                        <td>3320</td>
+                        <td>10/21/2013</td>
+                        <td>2:15 PM</td>
+                        <td>$5663.54</td>
+                      </tr>
+                      <tr>
+                        <td>3319</td>
+                        <td>10/21/2013</td>
+                        <td>2:13 PM</td>
+                        <td>$943.45</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="text-right">
+                  <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+      </div><!-- /#page-wrapper -->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+    </div><!-- /#wrapper -->
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+    <!-- Page Specific Plugins -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="js/morris/chart-data-morris.js"></script>
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
   </body>
 </html>
